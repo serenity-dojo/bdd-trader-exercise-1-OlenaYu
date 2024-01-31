@@ -49,11 +49,11 @@ public class StockController {
         TradingData.instanceFor(tradingDataSource).updatePriceFor(stockid, currentPrice);
     }
 
-    @RequestMapping(value = "/api/stocks/reset", method = RequestMethod.POST)
-    @Operation(description = "Reset the prices to default values the stock in a test environment")
-    public void resetTestPrices() {
-        TradingData.instanceFor(tradingDataSource).reset();
-    }
+//    @RequestMapping(value = "/api/stocks/reset", method = RequestMethod.POST)
+//    @Operation(description = "Reset the prices to default values the stock in a test environment")
+//    public void resetTestPrices() {
+//        TradingData.instanceFor(tradingDataSource).reset();
+//    }
 
     @RequestMapping(value = "/api/stock/popular", method = RequestMethod.GET)
     @Operation(description = "List high volume stocks")
