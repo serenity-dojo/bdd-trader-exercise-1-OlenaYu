@@ -22,7 +22,7 @@ public class WhenCreatingANewClient {
     @Test
     public void each_new_client_should_get_a_unique_id () {
         Client aNewClient = Client.withFirstName("Olena").andLastName("Yurova").andEmail("testemail@g.com");
-        RestAssured.given().contentType(ContentType.JSON)
+        given().contentType(ContentType.JSON)
                 .body(aNewClient)
                 .when()
                 .post("/client")
